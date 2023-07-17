@@ -1,0 +1,23 @@
+<form (ngSubmit)="addDish()" #newDishForm="ngForm" class="dish-form">
+  <div class="form-group">
+    <label for="dish_id">Dish ID</label>
+    <input type="number" id="dish_id" name="dish_id" [(ngModel)]="formData.dish_id" required>
+  </div>
+  <div class="form-group">
+    <label for="dish_name">Dish Name</label>
+    <input type="text" id="dish_name" name="dish_name" [(ngModel)]="formData.dish_name" required>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" [(ngModel)]="formData.price" required>
+  </div>
+  <div class="form-group">
+    <label for="availability">Availability</label>
+    <select id="availability" name="availability" [(ngModel)]="formData.availability">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  
+  <button type="submit" class="add-dish-button">Add Dish</button>
+</form>

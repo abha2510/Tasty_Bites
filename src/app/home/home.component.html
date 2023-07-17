@@ -1,0 +1,10 @@
+<div class="menu-container">
+    <div *ngFor="let dish of menu" class="menu-item">
+      <img src="{{ dish.image }}" alt="{{ dish.dish_name }}" class="dish-image">
+      <h3 class="dish-name">{{ dish.dish_name }}</h3>
+      <p class="dish-description">{{ dish.description }}</p>
+      <p class="dish-price">Price: {{ dish.price }}</p>
+      <button class="add-to-cart" (click)="addToCart(dish.dish_id)">Add to cart</button>
+    </div>
+  </div>
+  

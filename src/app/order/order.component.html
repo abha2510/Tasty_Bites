@@ -1,0 +1,8 @@
+<div *ngFor="let order of orders">
+    <h3>{{ order.dish_name }}</h3>
+    <img src="{{ order.image }}" alt="{{ order.dish_name }}" class="order-image">
+    <p>Price: {{ order.price }}</p>
+    <p>Total Price: {{ order.total_price }}</p>
+    <button (click)="deleteOrder(order.order_id)">Delete</button>
+  </div>
+  

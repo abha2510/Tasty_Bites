@@ -1,0 +1,13 @@
+<mat-dialog-content class="order-dialog-content">
+    <p>Order ID: {{ data.order.order_id }}</p>
+    <p>Current Status: {{ data.order.status }}</p>
+    <mat-form-field>
+      <mat-label>New Status</mat-label>
+      <input matInput [(ngModel)]="data.order.status" placeholder="Enter new status" />
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end" class="order-dialog-actions">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" (click)="updateStatus()">Update</button>
+  </mat-dialog-actions>
+  
